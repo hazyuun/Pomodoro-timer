@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;500&display=swap');
+
+
+:root {
+  --timer-idle: #dd8857;
+  --timer-working: #46AA8F;
+  --timer-short-break: #468FEA;
+  --timer-long-break: #EA468F;
+  --timer-background: #EEE;
+  
+  --background-color: #e7e8eb;
+  --background-color-darker: #c7c9d1;
+  --background-color-lighter: #ffffff;
+  
+  --background-color-light: #eaecf1;
+  --background-color-shadow: #9094a3;
+  --background-color-shadow-alt: #cacdd6;
+  
+  --text-color: #36456F  
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --timer-idle: #dd8857;
+    --timer-working: #46AA8F;
+    --timer-short-break: #468FEA;
+    --timer-long-break: #EA468F;
+    --timer-background: #303040;
+    
+    --background-color: #202030;
+    --background-color-darker: #10101d;
+    --background-color-lighter: #ffffff;
+    
+    --background-color-light: #33334b;
+    --background-color-shadow: #10101d;
+    --background-color-shadow-alt: #14142c;
+    
+    --text-color: #ddddee;  
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Raleway', sans-serif;
+}
+
+button {
+  /* background-color: var(--transparent-color-alt); */
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  background-color: var(--background-color);
+  box-shadow:  2px  2px 8px var(--background-color-shadow),
+              -2px -2px 8px var(--background-color-light),
+              inset 2px  2px 8px var(--background-color-light),
+              inset -2px -2px 8px var(--background-color-shadow-alt);
+  transition: all .2s ease;
+
+}
+
+button.active {
+  background-color: var(--background-color-darker);
+  box-shadow: inset 2px  2px 8px var(--background-color-shadow),
+              inset -2px -2px 8px var(--background-color-light);
+  transition: all .2s ease;
+}
+
+button:hover {
+  filter: brightness(104%);  
+}
+
+@media (prefers-color-scheme: dark) {
+  button:hover {
+    filter: brightness(110%);  
+  }  
+}

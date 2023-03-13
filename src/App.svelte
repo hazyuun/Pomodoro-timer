@@ -1,0 +1,26 @@
+<script lang="ts">
+  import Timer from './lib/components/Timer.svelte';
+</script>
+
+<main>
+  <h1>Pomodoro timer</h1>
+  <p>Use the buttons below to switch the state of the timer. </p>
+  <p> 
+    Click the timer ring to pause/resume the timer.
+  </p>
+
+  <Timer />
+</main>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 100vh;
+    width: 100vw;
+    padding: 0rem 1.5rem;
+  }
+</style>

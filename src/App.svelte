@@ -29,6 +29,8 @@
     justify-content: space-between;
     height: 100vh;
     width: 100vw;
+    padding: 3rem 0;
+    gap: 2rem;
   }
 
   .main {
@@ -44,7 +46,7 @@
   
   .links {
     width: 100vw;
-    padding: 1rem;
+    padding: .75rem 1rem;
     display: flex;
     gap: .5rem;
     background-color: var(--timer-background);

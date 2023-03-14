@@ -12,12 +12,16 @@
    * */
   let innerWidth: number;
   $: innerWidth = 0;
+  let innerHeight: number;
+  $: innerHeight = 0;
   
+  $:console.log(innerHeight)
   let progressRingSize: number 
-  $: progressRingSize = innerWidth < 768 ? 300 : 400;
+  $: progressRingSize = (innerWidth < 768 || innerHeight >= 600) ? 300 : 400;
+  $:console.log(progressRingSize)
   
   let progressRingWidth: number 
-  $: progressRingWidth = innerWidth < 768 ? 8 : 16;
+  $: progressRingWidth = (innerWidth < 768 || innerHeight >= 600) ? 8 : 16;
 
   let duration: number = 0;
   let percentage: number = 100;
@@ -118,7 +122,7 @@
   }
 </script>
 
-<svelte:window bind:innerWidth />
+<svelte:window bind:innerWidth bind:innerHeight />
 <svelte:head>
     <title>{pomodoro.getStateString()} {label}  | Pomodoro timer</title> 
 </svelte:head>
@@ -196,7 +200,7 @@
     </button>
     
   </div>
-  
+
 </div>
 
 <style>
@@ -207,7 +211,6 @@
     align-items: center;
     gap: 2rem;
   }
-  
   .controls {
     display: flex;
     justify-content: center;
@@ -221,7 +224,7 @@
       grid-template-columns: 1fr 1fr;
     }
   }
-
+  
   .clickable {
     cursor: pointer;
     transition: all .2s ease;
@@ -231,14 +234,14 @@
     filter: brightness(104%);
     transition: all .2s ease;
   }
-
+  
   @media (prefers-color-scheme: dark) {
     .clickable:hover {
       filter: brightness(110%);
       transition: all .2s ease;
     }
   }
-
+  
   .btn {
     min-height: 4rem; 
     min-width: 6rem;
@@ -249,13 +252,22 @@
     align-items: center;
     gap: 0;
   }
-
+  
   .btn-icon {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 1.5rem;
     aspect-ratio: 1;
+  }
+
+  @media screen and (max-height: 600px){
+    .btn {
+      font-size: .8rem;
+    }
+    .btn-icon {
+      width: 1rem;
+    }
   }
 
   @keyframes blinking {

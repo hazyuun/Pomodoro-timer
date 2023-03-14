@@ -29,7 +29,7 @@
     justify-content: space-between;
     height: 100vh;
     width: 100vw;
-    padding: 3rem 0;
+    padding: 3rem 0 0 0;
     gap: 2rem;
   }
 

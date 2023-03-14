@@ -16,10 +16,10 @@
   $: innerHeight = 0;
   
   let progressRingSize: number 
-  $: progressRingSize = (innerWidth < 768 || innerHeight >= 600) ? 300 : 400;
+  $: progressRingSize = (innerWidth < 768 || innerHeight < 720) ? 300 : 400;
   
   let progressRingWidth: number 
-  $: progressRingWidth = (innerWidth < 768 || innerHeight >= 600) ? 8 : 16;
+  $: progressRingWidth = (innerWidth < 768 || innerHeight < 720) ? 8 : 16;
 
   let duration: number = 0;
   let percentage: number = 100;
@@ -259,7 +259,7 @@
     aspect-ratio: 1;
   }
 
-  @media screen and (max-height: 600px){
+  @media screen and (max-height: 720px){
     .btn {
       font-size: .8rem;
     }

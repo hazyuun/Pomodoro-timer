@@ -1,5 +1,7 @@
 # Pomodoro timer app
-
+|Day|Night|
+|---|---|
+|![Screenshot with day color scheme](screenshots/day.png)|![Screenshot with night color scheme](screenshots/night.png)|
 ## To do
 - [ ] Night mode toggle
 - [ ] Customizable durations

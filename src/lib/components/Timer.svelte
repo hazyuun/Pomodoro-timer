@@ -35,9 +35,9 @@
   
   /* TODO: Make this customizable */
   const pomodoroOptions = {
-    workDuration: 1*60,
-    shortBreakDuration: 10,
-    longBreakDuration: 20
+    workDuration: 25*60,
+    shortBreakDuration: 5*60,
+    longBreakDuration: 30*60
   }
 
   /**

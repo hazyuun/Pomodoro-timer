@@ -8,8 +8,16 @@
   <p> 
     Click the timer ring to pause/resume the timer.
   </p>
-
+  
   <Timer />
+  
+  <span class="links">
+    &copy;2023
+    &middot;
+    <a href="https://github.com/hazyuun/Pomodoro-timer">Source</a>
+    &middot;
+    <a href="https://hazyuun.github.io/">Portfolio</a>
+  </span>
 </main>
 
 <style>
@@ -22,5 +30,16 @@
     height: 100vh;
     width: 100vw;
     padding: 0rem 1.5rem;
+  }
+  
+  .links {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100vw;
+    padding: 1rem;
+    display: flex;
+    gap: .5rem;
+    background-color: var(--timer-background);
   }
 </style>

@@ -15,10 +15,8 @@
   let innerHeight: number;
   $: innerHeight = 0;
   
-  $:console.log(innerHeight)
   let progressRingSize: number 
   $: progressRingSize = (innerWidth < 768 || innerHeight >= 600) ? 300 : 400;
-  $:console.log(progressRingSize)
   
   let progressRingWidth: number 
   $: progressRingWidth = (innerWidth < 768 || innerHeight >= 600) ? 8 : 16;

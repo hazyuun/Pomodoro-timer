@@ -3,7 +3,7 @@
 |---|---|
 |![Screenshot with day color scheme](screenshots/day.png)|![Screenshot with night color scheme](screenshots/night.png)|
 ## To do
-- [ ] Night mode toggle
+- [x] Night mode toggle
 - [ ] Customizable durations
 - [ ] Session history
 - [ ] Saving and loading multiple duration settings 

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;500&display=swap');
 
 
-:root {
+:root, :root.day {
   --timer-idle: #dd8857;
   --timer-working: #46AA8F;
   --timer-short-break: #468FEA;
@@ -39,6 +39,23 @@
   }
 }
 
+:root.night {
+  --timer-idle: #dd8857;
+  --timer-working: #46AA8F;
+  --timer-short-break: #468FEA;
+  --timer-long-break: #EA468F;
+  --timer-background: #303040;
+  
+  --background-color: #202030;
+  --background-color-darker: #10101d;
+  --background-color-lighter: #ffffff;
+  
+  --background-color-light: #33334b;
+  --background-color-shadow: #10101d;
+  --background-color-shadow-alt: #14142c;
+  
+  --text-color: #ddddee;  
+}
 
 * {
   margin: 0;
